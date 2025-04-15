@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rutas Favoritas - MovieSeguro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="main-body">
+  <header class="main-header">
+    <div class="user-info">
+      <img src="bus-icon.png" alt="Bus Icon">
+      <span>Usuario1</span>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <h2>Rutas Favoritas</h2>
+    <ul id="lista-favoritos"></ul>
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="main.html" class="nav-item">🏠</a>
+    <a href="favoritos.html" class="nav-item">⭐</a>
+    <a href="reporte.html" class="nav-item nav-add">➕</a>
+    <a href="rutas.html" class="nav-item">📍</a>
+    <a href="ayuda.html" class="nav-item">❓</a>
+  </nav>
+
+  <script type="module">
+    import { auth, database } from './firebase.js';
+    import { ref, onValue } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
+
+    const user = auth.currentUser;
+    const lista = document.getElementById("lista-favoritos");
+
+    auth.onAuthStateChanged((user) => {
+      if (!user) return;
+
+      const favRef = ref(database, 'favoritos/' + user.uid);
+      onValue(favRef, (snapshot) => {
+        lista.innerHTML = "";
+        const data = snapshot.val();
+        for (let id in data) {
+          const li = document.createElement("li");
+          li.textContent = `${data[id].ruta} - Guardado: ${new Date(data[id].fecha).toLocaleTimeString()}`;
+          lista.appendChild(li);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
