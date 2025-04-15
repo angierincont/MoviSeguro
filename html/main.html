@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MovieSeguro - Principal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="main-body">
+  <header class="main-header">
+    <div class="user-info">
+      <img src="bus-icon.png" alt="Bus Icon">
+      <span>Usuario1</span>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="menu-grid">
+      <a href="#" class="menu-item">Rutas Favoritas</a>
+      <a href="reporte.html" class="menu-item">Reportar Evento</a>
+      <a href="#" class="menu-item">Próximas Rutas</a>
+      <a href="#" class="menu-item">Ayuda / Tráfico</a>
+    </section>
+
+    <section class="ubicacion">
+      <h2>Ubicación Actual</h2>
+      <p>¿Desea habilitar la ubicación en tiempo real?</p>
+      <button onclick="activarUbicacion()">Activar</button>
+    </section>
+  </main>
+
+  <button onclick="cerrarSesion()">Cerrar sesión</button>
+
+  <section class="estaciones">
+    <h3>Estaciones peligrosas</h3>
+    <ul id="lista-estaciones"></ul>
+  </section>
+  <nav class="bottom-nav">
+    <a href="main.html" class="nav-item">🏠</a>
+    <a href="favoritos.html" class="nav-item">⭐</a>
+    <a href="reporte.html" class="nav-item nav-add">➕</a>
+    <a href="rutas.html" class="nav-item">📍</a>
+    <a href="ayuda.html" class="nav-item">❓</a>
+  </nav>
+  
+
+</body>
+</html>
