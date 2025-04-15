@@ -1,0 +1,13 @@
+{
+    "estaciones": {
+      "est1": {
+        "nombre": "Portal Sur",
+        "riesgo": "Alto"
+      },
+      "est2": {
+        "nombre": "Tercer Milenio",
+        "riesgo": "Medio"
+      }
+    }
+  }
+  
