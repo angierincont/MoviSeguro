@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrarse - MovieSeguro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="login-body">
+  <div class="login-container">
+    <div class="logo">
+      <img src="bus-icon.png" alt="Bus Icon">
+      <h1>MovieSeguro</h1>
+    </div>
+
+    <form id="register-form">
+      <input type="email" id="reg-email" placeholder="Correo electrónico" required>
+      <input type="password" id="reg-pass" placeholder="Contraseña" required>
+      <button type="submit">Registrarse</button>
+    </form>
+
+    <div class="login-links">
+      <a href="login.html">¿Ya tienes cuenta? Inicia sesión</a>
+    </div>
+  </div>
+
+  <script type="module" src="firebase.js"></script>
+  <script type="module" src="register.js"></script>
+  <nav class="bottom-nav">
+    <a href="main.html" class="nav-item">🏠</a>
+    <a href="favoritos.html" class="nav-item">⭐</a>
+    <a href="reporte.html" class="nav-item nav-add">➕</a>
+    <a href="rutas.html" class="nav-item">📍</a>
+    <a href="ayuda.html" class="nav-item">❓</a>
+  </nav>
+  
+</body>
+
+</html>
