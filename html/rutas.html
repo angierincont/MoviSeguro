@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Próximas Rutas - MovieSeguro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="main-body">
+  <header class="main-header">
+    <div class="user-info">
+      <img src="bus-icon.png" alt="Bus Icon">
+      <span>Usuario1</span>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="ubicacion">
+      <h2>Ubicación actual</h2>
+      <p>Punto A → Punto B</p>
+      <button onclick="activarUbicacion()">¿Activar ubicación en tiempo real?</button>
+    </section>
+
+    <section class="rutas-lista">
+      <h3>Próximas rutas</h3>
+      <div class="ruta">
+        <span>5 min. - C404</span>
+        <button onclick="agregarAFavoritos('C404')">⭐ Añadir a favoritos</button>
+      </div>
+      <div class="ruta">
+        <span>3 min. - 787A</span>
+        <button onclick="agregarAFavoritos('787A')">⭐ Añadir a favoritos</button>
+      </div>
+      <div class="ruta">
+        <span>+15 min. - 7</span>
+        <button onclick="agregarAFavoritos('7')">⭐ Añadir a favoritos</button>
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="main.html" class="nav-item">🏠</a>
+    <a href="favoritos.html" class="nav-item">⭐</a>
+    <a href="reporte.html" class="nav-item nav-add">➕</a>
+    <a href="rutas.html" class="nav-item">📍</a>
+    <a href="ayuda.html" class="nav-item">❓</a>
+  </nav>
+  
+</body>
+</html>
